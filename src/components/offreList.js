@@ -19,7 +19,7 @@ export default function OffreList({offres}){
                         ))
                      }
                 </Box>
-                <Box sx={{display:"flex",flexDirection:"column",alignItems:"center"}}>
+                <Box sx={{display:"flex",flexDirection:"column",alignItems:"center",backgroundColor:"black"}}>
                     <Typography 
                         variant="h3" 
                         fontFamily={"Bitter"} 
@@ -29,13 +29,13 @@ export default function OffreList({offres}){
                         fontWeight={"bold"}
                         >ELLES DONNENT ACCES A :
                     </Typography>
-                    <Box sx={{width:"65%",textAlign:"center",margin:"20px"}}>
+                    <Box sx={{color:"white",width:"65%",textAlign:"center",margin:"20px"}}>
                         <Typography variant="div" fontWeight={"bold"}>
                             Cours collectifs de Fitness / RPM cinéma et coaché / Functional training / Cross Training / Boxe /
                             TRX / Grit / Circuit Training / Sprint / Yoga / Espace Musculation / Cardio-Training
                         </Typography>
                     </Box>
-                    <Button size="large" sx={{margin:"10px",marginBottom:"80px",backgroundColor:"#4285F4",color:"white",width:"25%",fontWeight:"bold"}}>Inscription</Button>
+
                 </Box>  
         </div>
     )

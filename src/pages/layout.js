@@ -7,7 +7,7 @@ export default function Layout({navbar,children}){
             <div className={rootStyle.rootHeader}>
                 {navbar}
             </div>
-            <div className="root-body">
+            <div className={rootStyle.body}>
                 {children}
             </div>
         </div>

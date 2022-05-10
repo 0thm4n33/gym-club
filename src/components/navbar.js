@@ -1,17 +1,18 @@
 import { AppBar, Button, Toolbar } from "@mui/material";
 import React from "react";
+import { Link } from "react-router-dom";
 import navStyle from "../styles/navbar.module.css";
 export default function NavBar(){
     return(
-        <AppBar sx={{backgroundColor:"black",opacity:"0.7"}}>
+        <AppBar sx={{backgroundColor:"black",opacity:"1"}}>
             <Toolbar>
                 <div className={navStyle.navWrapper}>
                     <div className={navStyle.navLogo}>
                         <div className={navStyle.logo}>
-                             GYM FES
+                             GYM YOUSSY
                         </div>
                         <Button size="medium" sx={{color:"white", border:"3px solid white",height:"76%",marginTop:"15px"}}>
-                            Espace Membre
+                            <Link style={{textDecoration:"none",color:"white"}} to={'/membres'}>Espace Membre</Link>
                         </Button>
                     </div>  
                     <div className={navStyle.navLink}>

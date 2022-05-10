@@ -16,8 +16,8 @@ export default function Description({image,title,subtitle}){
                 <Typography variant="h8" fontWeight={"bold"} fontFamily={"Bitter"}>{subtitle}</Typography>
             </div>
         </Card>
-        <Box sx={{backgroundColor:"white",width:"50%",margin:"10px"}}>
-                <Typography variant="h4" fontWeight={"bold"} fontFamily={"Bitter"} style={{color:"black"}}>
+        <Box sx={{backgroundColor:"black",width:"50%",margin:"10px"}}>
+                <Typography variant="h4" fontWeight={"bold"} fontFamily={"Bitter"} style={{color:"white"}}>
                     DES COURS / DES COACHS SANS ENGAGEMENT
                 </Typography>
         </Box>

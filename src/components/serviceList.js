@@ -7,7 +7,6 @@ export default function ServiceList({services}){
     const max = services.length;
     
     const onNextClick = () =>{
-        console.log("next clicked")
         const value = steper + 1;
         value < max && stepChange(value);
     }

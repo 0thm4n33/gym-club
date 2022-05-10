@@ -3,9 +3,9 @@ import React from "react";
 
 export default function OffreComponent({nom,prix}){
     return(
-        <Box sx={{backgroundColor:"white",border:"none",padding:"10px",boxShadow:"5px 8px 8px gray"}}>
+        <Box sx={{backgroundColor:"black",border:"none",padding:"10px",boxShadow:"5px 8px 8px gray"}}>
             <div sx={{padding:"10px",margin:"40px"}}>
-                <Typography variant="h5" fontWeight={"bold"} fontFamily={"Bitter"}>
+                <Typography sx={{color:"white"}} variant="h5" fontWeight={"bold"} fontFamily={"Bitter"}>
                     OFFRE
                 </Typography>
                 <Typography variant="h4" color={"#4285F4"} fontWeight="bold" fontFamily={"Bitter"}>
@@ -18,10 +18,10 @@ export default function OffreComponent({nom,prix}){
                 </Typography>
             </div>
             <div sx={{margin:"40px"}}>
-                <Typography variant="h3" sx={{color:"black",fontFamily:"Bitter",fontWeight:"bold",margin:"10px"}}>390DH</Typography>
+                <Typography variant="h3" sx={{color:"white",fontFamily:"Bitter",fontWeight:"bold",margin:"10px"}}>390DH</Typography>
             </div>
-            <Typography>Frais d’inscription 390,90DH</Typography>
-            <Typography>Option sans engagement : +50DH /mois</Typography>
+            <Typography sx={{color:"white"}}>Frais d’inscription 390,90DH</Typography>
+            <Typography sc={{color:"white"}}>Option sans engagement : +50DH /mois</Typography>
         </Box>
     )
 }
