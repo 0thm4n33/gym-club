@@ -14,7 +14,7 @@
     justify-content: space-between;
     margin: 7px;
     padding: 7px;
-    border-bottom: 3px solid white;
+    border-bottom: 3px solid #94A1b2;
 }
 .navLink{
     justify-content: space-between;
@@ -25,12 +25,12 @@
     text-align: center;
     font-family: "Bitter";
     width: 60px;
-    border: 3px solid white;
+    border: 3px solid #94A1b2;
 }
 
 .navLink > a{
     text-decoration: none;
-    color: white;
+    color: #94A1b2;
     margin: 5px;
     font-family: "Bitter";
 }

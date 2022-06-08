@@ -1,20 +1,28 @@
 import { Box, Button, FormControl, Stack, TextField, Typography } from "@mui/material";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Services from "../services";
 import { useNavigate } from "react-router-dom";
+import authContext from "../context/authContext";
 
 export default function AuthentificationPage(){
     const navigate = useNavigate();
-    
+    let {setAuth} = useContext(authContext);
     const [user,setUser] = useState({
         login:"",
         password:""
-    })
-
+    });
+    
     const handleOnSubmit = () =>{
-        console.log(`user form : ${user.login}`)
-        const isAuth = Services.authenticate(user);
-        isAuth !== undefined && navigate('/members/admin/');
+        const foundedUser =  Services.authenticateUser(user);
+        if(foundedUser !== undefined){
+            if(foundedUser.role === "admin"){
+                setAuth('admin');
+                navigate('/members/admin/');
+            }else if(foundedUser.role === "adherent"){
+                setAuth('adh');
+                navigate(`/members/adherent/${foundedUser.adherent.id}`);
+            }
+        } 
     }
 
     const handleOnChange = (event) =>{
@@ -26,17 +34,17 @@ export default function AuthentificationPage(){
     return(
         <Box display={"flex"} justifyContent={"center"}>
             <Box sx={{
-                marginTop:"10px",width:"40%",height:"70vh",display:"flex",flexDirection:"column",justifyContent:"center"}}>
-              <Typography sx={{borderBottom:"2px solid black",textAlign:"center",padding:"10px",margin:"20px"}}>GYM YOUSSI</Typography>
+                marginTop:"10px",width:"70%",height:"70vh",display:"flex",flexDirection:"column",justifyContent:"center"}}>
+              <Typography color={"#7f5af0"} sx={{borderBottom:"2px solid #7f5af0",textAlign:"center",padding:"10px",margin:"20px"}}>GYM ORY</Typography>
               <FormControl>
                   {['login','password'].map(field =>(
                       field === "password" ? 
-                      <TextField label={field} name={"password"} type={"password"} sx={{margin:"10px"}} value={user.password} onChange={handleOnChange} /> :
-                      <TextField label={field} name={"login"} type={"text"} sx={{margin:"10px"}} value={user.login} onChange={handleOnChange}/>
+                      <TextField key={field} label={field} name={"password"} type={"password"} sx={{xs:{width:"100%"},margin:"10px"}} value={user.password} onChange={handleOnChange} /> :
+                      <TextField key={field} label={field} name={"login"} type={"text"} sx={{xs:{width:"100%"},margin:"10px"}} value={user.login} onChange={handleOnChange}/>
                   ))}
               </FormControl>
               <Stack flexDirection={"row-reverse"}>
-                    <Button sx={{color:"black"}} onClick={handleOnSubmit}>
+                    <Button sx={{backgroundColor:"#7f5af0",color:"white"}} onClick={handleOnSubmit}>
                         SE CONNECTER
                     </Button>
               </Stack>
