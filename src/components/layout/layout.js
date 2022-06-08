@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import NavBar from "../components/navbar";
-import SideBar from "../components/sideBar";
-import authContext from "../context/authContext";
-import rootStyle from "../styles/layout.module.css";
+import authContext from "../../context/authContext";
+import rootStyle from "../../styles/layout.module.css";
+import NavBar from "./navbar";
+import SideBar from "./sideBar";
 const items = [
     {
         name:"Gestion Adherent",

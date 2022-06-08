@@ -1,7 +1,5 @@
 import './App.css';
 import React from 'react';
-import Layout from './pages/layout';
-import NavBar from './components/navbar';
 import AcceuilPage from './pages/acceuil';
 import { BrowserRouter as Router,Route, Routes } from 'react-router-dom';
 import AuthentificationPage from './pages/authentification';
@@ -15,6 +13,7 @@ import AbonnementPage from './pages/abonnement';
 import AdherentPage from './components/adherents/acceuill';
 import AddMoniteur from './components/moniteur/AddMoniteur';
 import AllMoitors from './components/moniteur/ListMoniteur';
+import Layout from './components/layout/layout';
 export const ApplicationContext = React.createContext();
 function App() {
   return (

@@ -1,6 +1,6 @@
 import { Box, Card, CardMedia, Typography } from "@mui/material";
 import React from "react";
-import descStyle from "../styles/acceuill.module.css";
+import descStyle from "../../styles/acceuill.module.css";
 export default function Description({image,title,subtitle}){
     return(
     <div>

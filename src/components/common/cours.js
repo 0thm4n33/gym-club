@@ -1,8 +1,8 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
-import "../assets/images/body-bump.png";
+import "../../assets/images/body-bump.png";
 export default function CoursComponent({cours}){
-    const image = require('../assets/images/body-bump.png');
+    const image = require('../../assets/images/body-bump.png');
     return(
     <Box justifyContent={"center"} width={"90%"} margin={"5px"} display={"flex"} padding={"10px"}>
         <Box component={"img"} src={image} sx={{height:"90%",width:"60%"}} />

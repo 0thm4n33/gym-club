@@ -1,6 +1,6 @@
 import { Box, Button, Stack, Typography } from "@mui/material";
 import React, { useState } from "react";
-import Form from "../../forms/Form";
+import Form from "../forms/Form";
 import MaterielService from "../../services/materiel";
 
 export default function AddMatriel(){

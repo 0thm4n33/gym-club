@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
 import OffreComponent from "./offre";
-import style from "../styles/acceuill.module.css";
+import style from "../../styles/acceuill.module.css";
 
 export default function OffreList({offres}){
     return(

@@ -1,7 +1,7 @@
 import { Box,Divider, List } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import React from "react";
-import ItemSideBar from "./itemSideBar";
+import ItemSideBar from "../common/itemSideBar";
 const useStyle = makeStyles({
     textItem:{
         textTransform:"uppercase",

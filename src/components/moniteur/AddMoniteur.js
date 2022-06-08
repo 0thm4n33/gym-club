@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
-import Form from "../../forms/Form";
+import Form from "../forms/Form";
 
 export default function AddMoniteur(){
     let inputs = [

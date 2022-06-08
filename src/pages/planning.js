@@ -1,6 +1,6 @@
 import { Box,Typography } from "@mui/material";
 import React from "react";
-import ListCoursComponent from "../components/listCours";
+import ListCoursComponent from "../components/common/listCours";
 import Service from "../services";
 
 export default function PlanningPage(){ 

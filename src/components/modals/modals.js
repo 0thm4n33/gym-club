@@ -2,7 +2,7 @@ import React,{useEffect, useState} from "react";
 import { Box,Button,Dialog,DialogActions,DialogContent,Divider, IconButton, Modal, TextField } from "@mui/material";
 import {Add,Remove} from "@mui/icons-material"
 import Service from "../../services";
-import Form from "../../forms/Form";
+import Form from "../forms/Form";
 
 export default function ModalComponent(){
     const [open,setOpen] = useState(false);

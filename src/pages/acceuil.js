@@ -1,14 +1,14 @@
 import { Box, Button, Typography } from "@mui/material";
 import React from "react";
 import style from "../styles/acceuill.module.css";
-import Description from "../components/description";
-import OffreList from "../components/offreList";
+import Description from "../components/common/description";
+import OffreList from "../components/common/offreList";
 import Service from "../services/index.js"
 import { useNavigate } from "react-router-dom";
-import ServiceComponenet from "../components/service";
-import SwipeList from "../components/swipList";
+import ServiceComponenet from "../components/common/service";
+import SwipeList from "../components/common/swipList";
 export default function AcceuilPage(){
-    const image = require('../images/gym.jpg');
+    const image = require('../assets/images/gym.jpg');
     const services = Service.getGymServices();
     const navigate = useNavigate();
     return(

@@ -1,10 +1,10 @@
 import { Box, Button, FormControl, RadioGroup, Stack, Step, Stepper } from "@mui/material";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import ListPack from "../components/listPack";
-import PaymentMethode from "../components/paymentBox";
-import StepComponent from "../components/stepComponent";
-import Form from "../forms/Form";
+import ListPack from "../components/common/listPack";
+import PaymentMethode from "../components/common/paymentBox";
+import StepComponent from "../components/common/stepComponent";
+import Form from "../components/forms/Form";
 import Service from "../services/index"
 export default function InscriptionPage(){
     const inputs = [
