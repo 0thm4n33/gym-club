@@ -1,7 +1,7 @@
 import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
-import CoursComponent from "../components/common/listCours";
-import Service from "../services";
+import CoursComponent from "../components/common/cours";
+import Service from "../services/index";
 
 export default function CoursPage(){
     const cours = Service.getCours();
@@ -12,8 +12,8 @@ export default function CoursPage(){
                     <Typography color={"white"} padding={"5px"} sx={{backgroundColor:"black",fontSize:"30px"}} textAlign={"center"} fontFamily={"Consolas"}>{c.name.toUpperCase()}</Typography>
                     <Box display={"grid"} gridTemplateColumns={'repeat(2,1fr)'} gap={2}>
                         {
-                            c.cours.map(cours=>(
-                               <CoursComponent cours={cours} />
+                            c.cours.map(co=>(
+                               <CoursComponent cours={co} />
                             ))
                         }
                     </Box>
