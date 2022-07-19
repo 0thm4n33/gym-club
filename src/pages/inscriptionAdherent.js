@@ -1,27 +1,12 @@
-import { Box, Button, FormControl, RadioGroup, Stack, Step, Stepper } from "@mui/material";
+import { Box, Button, RadioGroup, Stack, Step, Stepper } from "@mui/material";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ListPack from "../components/common/listPack";
 import PaymentMethode from "../components/common/paymentBox";
 import StepComponent from "../components/common/stepComponent";
 import Form from "../components/forms/Form";
-import Service from "../services/index"
-export default function InscriptionPage(){
-    const inputs = [
-        {label:"nom",type:"text",required:true,width:"48%"},
-        {label:"prenom",type:"text",required:true,width:"48%"},
-        {label:"civilite",type:"select",options:["Mme","M."],required:true,width:"48%"},
-        {label:"email",type:"email",required:true,width:"48%"},
-        {label:"dateNaissance",type:"date",required:true,width:"48%"},
-        {label:"adresse",type:"text",required:true,width:"48%"},
-        {label:"password",type:"password",required:true,width:"48%"},
-        {label:"new-password",type:"password",required:true,width:"48%"},
-        {label:"postal",type:"number",required:true,width:"30%"},
-        {label:"ville",type:"select",options:["Fes","Meknes","Taza"],required:true,width:"66.1%"},
-    ]
 
-    const [step,setStep] = useState(0);
-    const navigate = useNavigate();
+export default function InscriptionPage(){
     const [adherent,setAdherent] = useState({
         nom:"",
         prenom:"",
@@ -37,7 +22,11 @@ export default function InscriptionPage(){
             name:""
         },
         payement:""
-    })
+    });
+    const [step,setStep] = useState(0);
+    const [packs,setPack] = useState([]);
+    const navigate = useNavigate();
+    
 
     const setInfoAdherent = (target)=>{
         setAdherent({...adherent,[target.name]:target.value});
@@ -45,6 +34,7 @@ export default function InscriptionPage(){
    
     const packSelected = (event)=>{
         let id = event.target.id;
+        console.log(`pack id: ${event.target.id}`);
         setAdherent({...adherent,abonnement:{
             ...adherent.abonnement,"id":id,"name":"classic"
         }});
@@ -52,8 +42,8 @@ export default function InscriptionPage(){
     };
 
     const next = (event) =>{
-        const valueOfButton = event.target.innerText;
-        if(valueOfButton === "REGISTER"){
+        const value = event.target.innerText;
+        if(value === "REGISTER"){
             console.log('adherent: '+JSON.stringify(adherent));
             navigate('/members');
 
@@ -74,8 +64,8 @@ export default function InscriptionPage(){
     
 
     let components = [
-        {name:"Choisir votre abonnement",component:<ListPack packs={Service.getPacks()} onPackClick={packSelected} />},
-        {name:"Creer votre compte en ligne",component:<Form inputs={inputs} handleOnChange={setInfoAdherent}/>},
+        {name:"Choisir votre abonnement",component:<ListPack onPackClick={packSelected} />},
+        {name:"Creer votre compte en ligne",component:<Form handleOnChange={setInfoAdherent}/>},
         {name:"Payement",component:
             <RadioGroup>
                 <Box sx={{display:"flex",border:"1px solid black",gap:"5px",flexWrap:"wrap"}}>
@@ -98,7 +88,11 @@ export default function InscriptionPage(){
             </Stepper>
             <React.Fragment>
                     {components[step].component}
-                    <Stack position={"relative"} flexDirection={"row"} justifyContent={"space-between"} width={"100%"}>
+                    <Stack 
+                        position={"relative"} 
+                        flexDirection={"row"} 
+                        justifyContent={"space-between"} 
+                        width={"100%"}>
                         <Button disabled={step === 0} onClick={prev}>Prev</Button>
                         <Button onClick={next}>{valueButton}</Button>
                     </Stack>

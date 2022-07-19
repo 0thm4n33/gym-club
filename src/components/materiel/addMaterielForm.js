@@ -1,10 +1,8 @@
 import { Box, Button, Stack, Typography } from "@mui/material";
 import React, { useState } from "react";
 import Form from "../forms/Form";
-import MaterielService from "../../services/materiel";
 
 export default function AddMatriel(){
-    const materielServices = new MaterielService();
     const optionsCategory = ["Electrique","Machine","Objet"];
     const optionStatus = ["Fontionnel","En Panne"]
     const inputs = [
@@ -46,11 +44,12 @@ export default function AddMatriel(){
     const onSubmit = ()=>{
         setMateriel({...materiel,"categorie":0,"status":0});
         console.log(`materiel : ${JSON.stringify(materiel)}`);
+        /*
         materielServices.addMateriel(materiel).then(response=>{
             console.log(`added ${response}`)
         }).catch(error=>{
             console.log(`error ${error}`)
-        })
+        })*/
     }
 
     return(

@@ -8,7 +8,7 @@ export default function CoursComponent({cours}){
         <Box component={"img"} src={image} sx={{height:"90%",width:"60%"}} />
         <Box sx={{backgroundColor:"white",border:"1px solid black",opacity:"90%"}} position={"relative"} width={"80%"} right={"10%"} top={"25%"} height={"40%"} padding={"5px"}>
           <Typography fontWeight={"bold"} fontSize={"30px"} fontFamily={"Consolas"}>
-                  {cours.coursName}
+                  {cours.nom}
           </Typography>
            <Box  display={"flex"} gap={3} justifyContent={"center"}>
                   <Typography fontWeight={"bold"} fontFamily={"Consolas"}>

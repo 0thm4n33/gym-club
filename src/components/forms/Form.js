@@ -1,8 +1,20 @@
 import { Box, MenuItem, TextField } from "@mui/material";
 import React from "react";
 
-export default function Form({handleOnChange,inputs}){
-   
+export default function Form({handleOnChange}){
+    const inputs = [
+        {label:"nom",type:"text",required:true,width:"48%"},
+        {label:"prenom",type:"text",required:true,width:"48%"},
+        {label:"civilite",type:"select",options:["Mme","M."],required:true,width:"48%"},
+        {label:"email",type:"email",required:true,width:"48%"},
+        {label:"dateNaissance",type:"date",required:true,width:"48%"},
+        {label:"adresse",type:"text",required:true,width:"48%"},
+        {label:"password",type:"password",required:true,width:"48%"},
+        {label:"new-password",type:"password",required:true,width:"48%"},
+        {label:"postal",type:"number",required:true,width:"30%"},
+        {label:"ville",type:"select",options:["Fes","Meknes","Taza"],required:true,width:"66.1%"},
+    ]
+
     const OnChange = (event)=>{
         handleOnChange(event.target);
     }
