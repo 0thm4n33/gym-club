@@ -23,7 +23,6 @@ export default function InscriptionPage(){
         payement:""
     });
     const [step,setStep] = useState(0);
-    const [packs,setPack] = useState([]);
     const navigate = useNavigate();
     
 

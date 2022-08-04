@@ -1,4 +1,4 @@
-const service = require('../../../services/service');
+const service = require('../../../services/restAPI');
 
 const getCours = async () =>{
     let cours = [];
