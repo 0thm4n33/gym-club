@@ -27,7 +27,7 @@ export default function SwipeList({children,length}){
             marginTop={"9px"}
             sx={{
                     display:"flex",
-                    width:"90%",
+                    width:"95%",
                     margin:"auto",
                     padding:"10px",
                     justifyContent:"center"

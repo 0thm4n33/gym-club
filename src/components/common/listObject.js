@@ -4,11 +4,13 @@ import React from "react";
 
 export default function ListObject({title,list}){
     return(
-        <Box display={"flex"} padding={"15px"} textAlign={"center"}  margin={"auto"} flexDirection={"column"}>
-            <Typography fontSize={"large"} fontWeight={"bold"} color={"black"}>{title}</Typography>
-                {list.map(item=>(
-                    <Typography fontFamily={"Consolas"} fontSize={"large"}>- {item}</Typography>
-                ))}
+        <Box display={"flex"} padding={"10px"}  flexDirection={"column"}>
+            <Typography fontSize={"large"} padding={"10px"} textAlign={"center"} fontWeight={"bold"} color={"black"}>
+                {title}
+            </Typography>
+                    {list.map(item=>(
+                        <Typography fontFamily={"Consolas"} fontSize={"large"}>- {item}</Typography>
+                    ))}
         </Box>
     )
 }

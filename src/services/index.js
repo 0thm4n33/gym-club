@@ -26,35 +26,12 @@ export default class Service {
         return this.authenticated;
     }
 
-    static async getPacks(){
-        const packs = await this.executeQuery('abonnements');
-        return packs;
-    }
-
     static getTarget(){
         return TARGET;
     }
-
-    static async getCours(){
-        const cours = [];
-        const data = await this.executeQuery('ServicesGetService');
-        data.forEach(c =>{
-            cours.push(this.constructCours(c));
-        })
-        return cours;
-    }
-
+    
     static executeQuery = async (url) =>{
         const result = await fetch(`${TARGET}/${url}`);
         return result.json();
     }
-
-    static constructCours = ({nom,cours})=>{
-        let cs = [];
-        cours.forEach(c=>{
-            cs.push(c);
-        });
-        return {name : nom,cours:cs};
-    }
-
 }
