@@ -1,6 +1,6 @@
 import { Box, Card, CardMedia, Typography } from "@mui/material";
 import React from "react";
-import descStyle from "../../styles/acceuill.module.css";
+import {style} from '../index';
 export default function Description({image,title,subtitle}){
     return(
     <div>
@@ -11,7 +11,7 @@ export default function Description({image,title,subtitle}){
                 height={400}
                 sx={{opacity:"0.5"}}
             />
-            <div className={descStyle.text}>
+            <div className={style.text}>
                 <Typography color={"#94A1b2"} variant="h2" fontWeight={"bold"} fontFamily={"Bitter"}>{title}</Typography>
                 <Typography color={"#94A1b2"} variant="h8" fontWeight={"bold"} fontFamily={"Bitter"}>{subtitle}</Typography>
             </div>

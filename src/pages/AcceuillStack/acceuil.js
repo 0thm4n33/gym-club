@@ -1,15 +1,12 @@
 import { Box, Button, Typography } from "@mui/material";
 import React from "react";
-import style from "../styles/acceuill.module.css";
-import Description from "../components/common/description";
-import OffreList from "../components/common/offreList";
-import Service from "../services/index.js"
+import Service from "../../services/index.js"
 import { useNavigate } from "react-router-dom";
-import ServiceComponenet from "../components/common/service";
-import SwipeList from "../components/common/swipList";
+import {ServiceComponenet,OffreList,Description,style,gymImages} from "./index"; 
+import SwipeList from "../../components/common/swipList";
 export default function AcceuilPage(){
-    const image = require('../assets/images/gym.jpg');
-    const services = Service.getGymServices();
+    const image = require('./images/gym.jpg');
+    const services = gymImages;
     const navigate = useNavigate();
     return(
         <div style={{backgroundColor:"black"}}>

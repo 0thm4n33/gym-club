@@ -1,3 +1,4 @@
 import InscriptionPage from './InscriptionPack/inscriptionAdherent';
 import CoursPage from './CoursPack/coursPage';
-export {InscriptionPage,CoursPage}
+import AcceuilPage from './AcceuillStack/acceuil';
+export {InscriptionPage,CoursPage,AcceuilPage}

@@ -1,11 +1,10 @@
 import './App.css';
 import React from 'react';
-import AcceuilPage from './pages/acceuil';
 import { BrowserRouter as Router,Route, Routes } from 'react-router-dom';
 import AuthentificationPage from './pages/authentification';
 import AdminPage from './pages/admin';
 import Service from './services';
-import {InscriptionPage,CoursPage} from './pages/index';
+import {InscriptionPage,CoursPage,AcceuilPage} from './pages/index';
 import AddMatriel from './components/materiel/addMaterielForm';
 import PlanningPage from './pages/planning';
 import AbonnementPage from './pages/abonnement';

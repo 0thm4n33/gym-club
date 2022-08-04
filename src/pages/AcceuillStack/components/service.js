@@ -17,7 +17,7 @@ export default function ServiceComponenet({imagePath,nom}){
                     sx={{opacity:"0.3"}}
                     width={"100%"}
                     component={"img"}
-                    src={require(`../../assets/${imagePath}`)}
+                    src={require(`../images/${imagePath}`)}
                 />
                 <Box 
                     component={"div"}
