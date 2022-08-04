@@ -2,9 +2,8 @@ import { Box, Typography } from "@mui/material";
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import CoursComponent from "../components/common/cours";
-//import Service from "../services/index";
-const coursHelper = require('../services/helpers/coursHelper');
+import {CoursComponent,coursHelper} from './index';
+
 export default function CoursPage(){
     const [cours,setCours] = useState([]);
     

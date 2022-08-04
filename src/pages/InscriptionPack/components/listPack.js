@@ -1,9 +1,8 @@
 import { Box } from "@mui/material";
 import React, { useEffect } from "react";
 import { useState } from "react";
-import DetailOffre from "./detailOffre";
-import SwipeList from "./swipList";
-const packHelper = require('../../services/helpers/packHelper');
+import {PackDetail,packHelper} from '../index';
+import SwipeList from "../../../components/common/swipList";
 
 export default function ListPack({onPackClick}){
     const [packs,setPacks] = useState([]);
@@ -11,7 +10,6 @@ export default function ListPack({onPackClick}){
         async function fetchData(){
             if(packs.length === 0){
                 const result = await packHelper.getPacks();
-                console.log(result);
                 setPacks(result);
             }
         }
@@ -23,7 +21,7 @@ export default function ListPack({onPackClick}){
         }}>
             <SwipeList  length={packs.length}>
                 {packs.map((pack)=>(
-                    <DetailOffre 
+                    <PackDetail 
                         key={pack.title}
                         id={pack.id}
                         title={pack.title} 

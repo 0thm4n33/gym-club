@@ -1,5 +1,5 @@
-const service = require('../service');
-const Pack = require('../../models/pack');
+const service = require('../../../services/service');
+const Pack = require('../models/pack');
 const getPacks = async () =>{
     const packs = [];
     const data = await service.executeQuery('abonnements');

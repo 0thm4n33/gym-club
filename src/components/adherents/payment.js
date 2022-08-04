@@ -1,7 +1,7 @@
 import { RadioGroup } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useState } from "react";
-import PaymentMethode from "../common/paymentBox";
+import PaymentMethode from "../../pages/InscriptionPack/components/paymentBox";
 
 export default function PaymentInfo({adh}){
     const [method,setMethod] = useState('');

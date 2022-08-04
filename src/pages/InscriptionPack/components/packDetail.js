@@ -1,8 +1,7 @@
 import { Box,Button,Typography } from "@mui/material";
 import React from "react";
-import ListObject from "./listObject";
-import "../../assets/images/gymServices/boxing.jpeg";
-export default function DetailOffre({id,title,prix,activities,services,onClick}){
+import ListObject from "../../../components/common/listObject";
+export default function PackDetail({id,title,prix,activities,services,onClick}){
     return(
             <Box sx={{display:"flex",height:{md:"90%"},justifyContent:"center",alignItems:"center",padding:"12px",flexDirection:"column"}}>
                 <Box sx={{

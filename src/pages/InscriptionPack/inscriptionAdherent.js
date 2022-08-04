@@ -1,10 +1,9 @@
 import { Box, Button, RadioGroup, Stack, Step, Stepper } from "@mui/material";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import ListPack from "../components/common/listPack";
-import PaymentMethode from "../components/common/paymentBox";
-import StepComponent from "../components/common/stepComponent";
-import Form from "../components/forms/Form";
+import {ListPack,PaymentMethode} from './index';
+import StepComponent from "../../components/common/stepComponent";
+import Form from "../../components/forms/Form";
 
 export default function InscriptionPage(){
     const [adherent,setAdherent] = useState({
@@ -65,7 +64,7 @@ export default function InscriptionPage(){
 
     let components = [
         {name:"Choisir votre abonnement",component:<ListPack onPackClick={packSelected} />},
-        {name:"Creer votre compte en ligne",component:<Form handleOnChange={setInfoAdherent}/>},
+        {name:"Creer votre compte en ligne",component:<Form handleOnChange={setInfoAdherent} />},
         {name:"Payement",component:
             <RadioGroup>
                 <Box sx={{display:"flex",border:"1px solid black",gap:"5px",flexWrap:"wrap"}}>
@@ -76,7 +75,8 @@ export default function InscriptionPage(){
             </RadioGroup>
         },
     ]
-    let valueButton =  step === (components.length-1) ? "Register" : "Next"
+    let valueButton =  step === (components.length-1) ? "Register" : "Next";
+
     return(
         <Box margin={"auto"} width={"95%"}>
             <Stepper sx={{marginTop:"10px"}} activeStep={step}>
