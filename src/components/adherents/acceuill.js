@@ -2,7 +2,7 @@ import { Box } from "@mui/system";
 import React from "react";
 import { useParams } from "react-router-dom";
 import Service from "../../services";
-import ListCoursComponent from "../common/listCours";
+import ListCoursComponent from "../../pages/PlanningStack/components/listCours";
 
 export default function AdherentPage(){
     const { id } = useParams();

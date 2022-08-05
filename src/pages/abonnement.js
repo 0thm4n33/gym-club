@@ -5,7 +5,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import InfoComponent from "../components/adherents/info";
 import PaymentInfo from "../components/adherents/payment";
-import ListCoursComponent from "../components/common/listCours";
+import ListCoursComponent from "./PlanningStack/components/listCours";
 import ModalComponent from "../components/modals/modals";
 import Service from "../services";
 
